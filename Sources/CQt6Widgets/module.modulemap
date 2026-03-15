@@ -1,0 +1,19 @@
+// Swift module map for Qt6.
+//
+// This portable version declares the CQt6Widgets module using the [system]
+// attribute and requires C++ interoperability (Swift 5.9+, SE-0384).
+// Include paths are supplied at build time via pkg-config ("Qt6Widgets").
+//
+// To generate a detailed module map with explicit per-module header paths
+// for your local Qt6 installation, run:
+//
+//   scripts/generate_qt6_swift_module.sh
+//
+// The detailed map will be written to .build/doxygen-qt6/module.modulemap.
+//
+// Reference: https://www.swift.org/documentation/articles/wrapping-c-cpp-library-in-swift.html
+
+module CQt6Widgets [system] {
+    requires cplusplus
+    export *
+}
